@@ -1,0 +1,23 @@
+{
+  "name": "local-hwp-kordoc-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local CLI wrapper for kordoc HWP/HWPX parsing without MCP.",
+  "bin": {
+    "hwp-kordoc": "./bin/hwp-kordoc-cli.js"
+  },
+  "scripts": {
+    "hwp": "node ./bin/hwp-kordoc-cli.js",
+    "check": "node ./bin/hwp-kordoc-cli.js --help"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.8",
+    "cfb": "1.2.2",
+    "jszip": "^3.10.1",
+    "markdown-it": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
