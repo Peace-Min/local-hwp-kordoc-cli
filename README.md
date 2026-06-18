@@ -6,6 +6,20 @@ include or expose the kordoc MCP server.
 
 ## Install
 
+After cloning on Windows, double-click:
+
+```text
+setup.cmd
+```
+
+It checks Node.js 18+, installs locked npm dependencies, creates
+`hwp-kordoc.cmd`, and verifies the CLI.
+
+If Node.js is not installed, either install Node.js 18+ first or place a Node.js
+Windows MSI under `tools\` before running `setup.cmd`.
+
+Manual install:
+
 ```powershell
 npm.cmd install
 ```
@@ -37,6 +51,7 @@ See `README_OFFLINE.md` for the full offline workflow.
 
 ```powershell
 npm.cmd run hwp -- .\sample.hwpx -o .\sample.md
+hwp-kordoc.cmd .\sample.hwpx -o .\sample.md
 node .\bin\hwp-kordoc-cli.js .\sample.hwp --format json -o .\sample.json
 node .\bin\hwp-kordoc-cli.js .\input\file.hwp --out-dir .\out
 ```
