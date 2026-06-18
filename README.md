@@ -13,6 +13,26 @@ npm.cmd install
 PowerShell may block `npm.ps1` depending on execution policy, so `npm.cmd` is
 used in the examples.
 
+## Offline Bundle
+
+For a closed-network PC, build an offline ZIP on an internet-connected Windows
+PC:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\prepare-offline-bundle.ps1
+```
+
+The ZIP is created under `dist\offline\` and includes the app, `node_modules`,
+an installer script, and a Node.js MSI unless `-SkipNodeDownload` is passed.
+
+On the closed-network PC, extract the ZIP and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install.ps1 -InstallNode
+```
+
+See `README_OFFLINE.md` for the full offline workflow.
+
 ## Usage
 
 ```powershell
