@@ -6,17 +6,21 @@ include or expose the kordoc MCP server.
 
 ## Install
 
-After cloning on Windows, double-click:
+After cloning on Windows, double-click or run:
 
 ```text
-setup.cmd
+hwp-kordoc.cmd
 ```
 
-It checks Node.js 18+, installs locked npm dependencies, creates
-`hwp-kordoc.cmd`, and verifies the CLI.
+On first run, `hwp-kordoc.cmd` checks Node.js 18+, installs locked npm
+dependencies with `npm ci --omit=dev` when `node_modules` is missing, and then
+runs the CLI.
+
+`setup.cmd` is also available if you want to run setup explicitly.
 
 If Node.js is not installed, either install Node.js 18+ first or place a Node.js
-Windows MSI under `tools\` before running `setup.cmd`.
+Windows MSI under `tools\` before running `hwp-kordoc.cmd` or `setup.cmd`.
+The release offline bundle already includes the Node.js MSI and `node_modules`.
 
 Manual install:
 
